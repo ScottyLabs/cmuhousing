@@ -1,13 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { Schibsted_Grotesk } from "next/font/google";
-
-const schibsted = Schibsted_Grotesk({
-    variable: '--font-schibsted',
-    subsets: ['latin'],
-    weight: ['600'],
-})
 
 import { Building, useTagById } from "./BuildingContext"
 
@@ -31,8 +24,7 @@ export default function BuildingOption({ building }: { building: Building }) {
                     pointer-events-none
                 " />
 
-                <div className={`
-                    ${schibsted.variable}
+                <div className="
                     font-sans 
                     absolute 
                     bottom-0 
@@ -42,7 +34,7 @@ export default function BuildingOption({ building }: { building: Building }) {
                     text-px[24]
                     px-6 py-2 
                     rounded
-                `}>
+                ">
                     {building.name}
                 </div>
             </div>
@@ -57,10 +49,10 @@ export default function BuildingOption({ building }: { building: Building }) {
                                     <Image
                                         src={tag.icon}
                                         alt={tag.label}
-                                        width={37}
-                                        height={37}
+                                        width={28.75}
+                                        height={28.75}
                                     />
-                                    <h2 className={`${schibsted.variable} font-sans text-px[18] font-medium `}>
+                                    <h2 className="font-sans text-px[18] font-medium">
                                         {tag.label}
                                     </h2>
                                 </div>

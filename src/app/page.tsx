@@ -1,18 +1,11 @@
 import Image from "next/image";
-import { Schibsted_Grotesk } from "next/font/google";
-import { BestFit, DecentFit, WildCard } from "@/BuildingRowsDemo";
-
-const schibsted = Schibsted_Grotesk({
-  variable: '--font-schibsted',
-  subsets: ['latin'],
-  weight: ['700'],
-})
+import { BestFit, DecentFit, WildCard } from "@/components/BuildingRowsDemo";
 
 export default function Home() {
   return (
     <main>
       <div className='px-10'>
-        <h1 className={`${schibsted.variable} font-sans font-bold text-[24px] py-3`}>
+        <h1 className="font-sans font-bold text-[24px] py-3">
           All Building Options
         </h1>
         <div className='flex flex-col gap-[32px] row-start-2 items-center sm:items-start'>
@@ -24,7 +17,7 @@ export default function Home() {
                 width={37}
                 height={37}
               />
-              <h2 className={`${schibsted.variable} font-sans font-bold text-lg `}>
+              <h2 className="font-sans font-bold text-lg">
                 Best Fit for You
               </h2>
             </div>
@@ -38,7 +31,7 @@ export default function Home() {
                 width={37}
                 height={37}
               />
-              <h2 className={`${schibsted.variable} font-sans font-bold text-lg `}>
+              <h2 className="font-sans font-bold text-lg">
                 Decent Fit
               </h2>
             </div>
@@ -52,12 +45,13 @@ export default function Home() {
                 width={37}
                 height={37}
               />
-              <h2 className={`${schibsted.variable} font-sans font-bold text-lg `}>
+              <h2 className="font-sans font-bold text-lg">
                 Wild Card
               </h2>
             </div>
             <WildCard />
           </div>
+          <div className='space-y-2' />
         </div>
       </div>
     </main>

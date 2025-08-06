@@ -1,24 +1,19 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { BuildingProvider } from "@/BuildingContext";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { BuildingProvider } from "@/components/BuildingContext";
+import Navbar from "@/components/Navbar";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="h-screen flex flex-col">
+        <Navbar />
+        <div className="h-0.5 bg-gray-200 mb-4"></div>
         <BuildingProvider>
-          {children}
+          <main className="flex-1 overflow-y-auto">
+            {children}
+          </main>
         </BuildingProvider>
       </body>
     </html>
