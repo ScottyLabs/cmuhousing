@@ -15,13 +15,14 @@ export default function NavButton({ href, name, icon, isActive }: { href: string
                 }
             `}
         >
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center">
                 <Image
                     src={icon}
                     alt={name}
                     width={14}
                     height={14}
                     className={isActive ? "brightness-0 invert" : "brightness-100"}
+                    style={{ height: '14px', width: '14px' }}
                 />
                 {name}
             </div>

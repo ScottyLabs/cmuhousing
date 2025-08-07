@@ -7,11 +7,13 @@ import { Building, useTagById } from "./BuildingContext"
 export default function BuildingOption({ building }: { building: Building }) {
     return (
         <div className='flex flex-col gap-4'>
-            <div className="relative w-[240] h-[165] overflow-hidden rounded-lg">
+            <div className="relative w-[240px] h-[165px] overflow-hidden rounded-lg">
                 <Image
                     src={building.image}
                     alt={building.name}
                     fill
+                    sizes="240px"
+                    priority
                 />
                 <div className="
                     absolute 
@@ -51,6 +53,7 @@ export default function BuildingOption({ building }: { building: Building }) {
                                         alt={tag.label}
                                         width={28.75}
                                         height={28.75}
+                                        className="w-[28.75px] h-[28.75px]"
                                     />
                                     <h2 className="font-sans text-px[18] font-medium">
                                         {tag.label}

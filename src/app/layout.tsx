@@ -1,17 +1,26 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { BuildingProvider } from "@/components/BuildingContext";
 import Navbar from "@/components/Navbar";
+import { Schibsted_Grotesk } from "next/font/google";
+
+const schibstedGrotesk = Schibsted_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-schibsted',
+  display: 'swap',
+  preload: false,
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="h-screen flex flex-col">
+      <head>
+        <link rel="icon" href="/favicon.svg" />
+      </head>
+      <body className={`h-screen flex flex-col ${schibstedGrotesk.variable}`}>
         <Navbar />
         <div className="h-0.5 bg-gray-200 mb-4"></div>
         <BuildingProvider>
-          <main className="flex-1 overflow-y-auto">
+          <main className="flex-1 overflow-hidden">
             {children}
           </main>
         </BuildingProvider>

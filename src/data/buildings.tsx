@@ -27,7 +27,7 @@ export const buildings = [
     id: 'donner',
     name: 'Donner',
     image: '/building-images/donner.jpg',
-    tags: ['noKitchen', 'limitedAC', 'basementLaundry']
+    tags: ['noKitchen']
   },
   {
     id: 'henderson',
@@ -39,7 +39,7 @@ export const buildings = [
     id: 'mcgill',
     name: 'McGill',
     image: '/building-images/mcgill.jpg',
-    tags: ['noKitchen', 'noCentralAC']
+    tags: ['noKitchen']
   },
   {
     id: 'morewood',

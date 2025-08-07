@@ -17,6 +17,7 @@ export default function Navbar() {
                     alt="CMU Housing"
                     width={168}
                     height={28}
+                    className="w-[168px] h-[28px]"
                 />
             </Link>
 
@@ -40,7 +41,7 @@ export default function Navbar() {
                         alt="profile"
                         width={40}
                         height={40}
-                        className="rounded-full"
+                        className="rounded-full w-[40px] h-[40px]"
                     />
                 </Link>
             </div>
