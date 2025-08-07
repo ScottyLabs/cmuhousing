@@ -15,7 +15,7 @@ export default function BuildingOptionRow({ title, icon, icon_alt, buildings }: 
                     height={37}
                     className="w-[37px] h-[37px]"
                 />
-                <h2 className="font-sans font-bold text-lg">
+                <h2 className="font-sans font-semibold text-lg">
                     {title}
                 </h2>
             </div>
@@ -23,7 +23,5 @@ export default function BuildingOptionRow({ title, icon, icon_alt, buildings }: 
                 {buildings.map(b => (<BuildingOption key={b.id} building={b} />))}
             </div>
         </div>
-
-
     );
 }

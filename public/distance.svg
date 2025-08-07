@@ -1,14 +1,7 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_194_8469)">
-<path d="M3.70839 9H5.55608C6.29133 9 6.88736 9.59603 6.88736 10.3313V10.3313C6.88736 11.0665 6.29133 11.6626 5.55608 11.6626H3.70839C2.72806 11.6626 1.93335 12.4573 1.93335 13.4376V13.4376C1.93335 14.4179 2.72806 15.2126 3.70839 15.2126H11.5481" stroke="black" stroke-width="1.22489" stroke-linecap="round"/>
-<path d="M8.5896 7.65681C8.5896 10.6334 11.5819 12.9748 11.5819 12.9748C11.5819 12.9748 14.5741 10.6334 14.5741 7.65681C14.5741 6.00428 13.2343 4.66467 11.5819 4.66467C9.92937 4.66467 8.5896 6.00428 8.5896 7.65681Z" stroke="black" stroke-width="1.22489" stroke-linejoin="round"/>
-<circle cx="11.582" cy="7.46538" r="0.840258" fill="black"/>
-<path d="M1.47144 3.02446C1.47144 5.24979 3.7085 7.00026 3.7085 7.00026C3.7085 7.00026 5.94556 5.24979 5.94556 3.02446C5.94556 1.78899 4.94392 0.787476 3.7085 0.787476C2.47308 0.787476 1.47144 1.78899 1.47144 3.02446Z" stroke="black" stroke-width="1.22489" stroke-linejoin="round"/>
-<circle cx="3.70852" cy="2.88124" r="0.628193" fill="black"/>
-</g>
-<defs>
-<clipPath id="clip0_194_8469">
-<rect width="16" height="16" fill="white"/>
-</clipPath>
-</defs>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 8.56128C2 16.0832 9.56156 22 9.56156 22C9.56156 22 17.1231 16.0832 17.1231 8.56128C17.1231 4.38524 13.7375 1 9.56156 1C5.38567 1 2 4.38524 2 8.56128Z" fill="#FF983E" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="9.5" cy="8.5" r="2.5" fill="white" stroke="black" stroke-width="2"/>
+<path d="M26 25.0817C26 35.1109 36.0821 43 36.0821 43C36.0821 43 46.1642 35.1109 46.1642 25.0817C46.1642 19.5137 41.6499 15 36.0821 15C30.5142 15 26 19.5137 26 25.0817Z" fill="#FF983E" stroke="black" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="36.082" cy="24.436" r="3.71527" fill="white" stroke="black" stroke-width="2"/>
+<path d="M9.5 26H17.5C19.9853 26 22 28.0147 22 30.5V30.5C22 32.9853 19.9853 35 17.5 35H9.5C6.18629 35 3.5 37.6863 3.5 41V41C3.5 44.3137 6.18629 47 9.5 47H36" stroke="black" stroke-width="2" stroke-linecap="round"/>
 </svg>
