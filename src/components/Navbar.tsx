@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from 'next/image'
 import NavButton from "./NavButton";
 import GenericButton from "./GenericButton";
+import { ButtonVariants } from "./GenericButton";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -34,7 +35,9 @@ export default function Navbar() {
             </div>
 
             <div className="flex gap-8 items-center">
-                <GenericButton name="Share with friends!" icon="/share.svg" />
+                <div>
+                    <GenericButton name="Share with friends!" nameSize={16} icon="/share.svg" style={ButtonVariants.Gray} />
+                </div>
                 <Link href="/profile">
                     <Image
                         src="/profile.svg"

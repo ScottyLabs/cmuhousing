@@ -51,7 +51,7 @@ export default function DropdownButton({ options, placeholder = "Select an optio
         <div ref={dropdownRef} className="relative w-full">
             <div
                 onClick={() => setIsOpen(!isOpen)}
-                className={"px-4 py-2 rounded-xl font-medium bg-brand-buttongray border border-black/10 w-full flex items-center justify-between select-none"}
+                className={"px-4 py-2 rounded-xl font-medium bg-brand-buttongray border border-black/10 w-full flex items-center justify-between select-none cursor-pointer"}
             >
                 <span className="font-medium">
                     {selectedOption ? selectedOption.label : placeholder}
