@@ -5,7 +5,9 @@ export default {
         extend: {
             colors: {
                 brand: {
-                    primary: "#FF983E"
+                    primary: "#FF983E",
+                    menugray: "#F5F8FA",
+                    buttongray: "#E4EAED"
                 }
             },
 

@@ -23,13 +23,13 @@ export default function Navbar() {
 
             <div className="flex gap-8 items-center">
                 <NavButton href="/" name="Home" icon="/home.svg" isActive={pathname === "/"} />
-                <div className="h-4 w-0.5 bg-gray-300" />
+                <div className="h-4 w-0.5 bg-black/10" />
                 <NavButton href="/building_options" name="All Building Options" icon="/all-buildings.svg" isActive={pathname === "/building_options"} />
-                <div className="h-4 w-0.5 bg-gray-300" />
+                <div className="h-4 w-0.5 bg-black/10" />
                 <NavButton href="/building_comparison" name="Building Comparison" icon="/comparison.svg" isActive={pathname === "/building_comparison"} />
-                <div className="h-4 w-0.5 bg-gray-300" />
+                <div className="h-4 w-0.5 bg-black/10" />
                 <NavButton href="/map" name="Campus Map" icon="/map.svg" isActive={pathname === "/map"} />
-                <div className="h-4 w-0.5 bg-gray-300" />
+                <div className="h-4 w-0.5 bg-black/10" />
                 <NavButton href="/roommates" name="Roommates" icon="/person.svg" isActive={pathname === "/roommates"} />
             </div>
 
