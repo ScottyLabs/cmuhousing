@@ -14,7 +14,7 @@ export default function Home() {
           All Building Options
         </h1>
         <div className="flex-1 overflow-y-auto">
-          <div className='flex flex-col gap-[32px] items-center sm:items-start pb-2'>
+          <div className='flex flex-col gap-[16px] items-center sm:items-start pb-2'>
             <BestFit />
             <DecentFit />
             <WildCard />

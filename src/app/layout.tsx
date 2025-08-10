@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="icon" href="/favicon.svg" />
       </head>
-      <body className={`h-screen flex flex-col ${schibstedGrotesk.variable}`}>
+      <body className={`h-screen flex flex-col overflow-x-hidden ${schibstedGrotesk.variable}`}>
         <Navbar />
         <div className="h-0.5 bg-gray-200 mb-4"></div>
         <BuildingProvider>

@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function BuildingOptionRow({ title, icon, icon_alt, buildings }: { title: string, icon: string, icon_alt: string, buildings: Building[] }) {
     return (
-        <div className='space-y-2'>
+        <div className='space-y-2 overflow-x-auto min-w-[300px] max-w-full pb-3'>
             <div className='flex gap-[12px] items-center'>
                 <Image
                     src={icon}
@@ -19,7 +19,7 @@ export default function BuildingOptionRow({ title, icon, icon_alt, buildings }: 
                     {title}
                 </h2>
             </div>
-            <div className="flex gap-[12px]">
+            <div className="flex gap-[12px] ">
                 {buildings.map(b => (<BuildingOption key={b.id} building={b} />))}
             </div>
         </div>

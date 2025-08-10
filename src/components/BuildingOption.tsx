@@ -7,12 +7,12 @@ import { Building, useTagById } from "./BuildingContext"
 export default function BuildingOption({ building }: { building: Building }) {
     return (
         <div className='flex flex-col gap-4'>
-            <div className="relative w-[240px] h-[165px] overflow-hidden rounded-lg">
+            <div className="relative w-[216px] h-[148px] overflow-hidden rounded-lg">
                 <Image
                     src={building.image}
                     alt={building.name}
                     fill
-                    sizes="240px"
+                    style={{ objectFit: 'cover' }}
                     priority
                 />
                 <div className="
