@@ -8,6 +8,8 @@ import { useState } from 'react'
 import { Building, useBuildings } from './BuildingContext'
 import GenericButton from './GenericButton'
 import { ButtonVariants } from './GenericButton'
+import Slider from './Slider'
+import Checkbox from './Checkbox'
 
 export default function BuildingFilter() {
     const [isOpen, setIsOpen] = useState(true);
