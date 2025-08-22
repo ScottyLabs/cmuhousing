@@ -4,19 +4,41 @@ First, make sure you have docker installed
 
 **Installing Docker (Ubuntu/WSL)**
 
-```
-sudo apt-get update
-sudo apt install docker.io
-```
-```
-$ docker --version
-Docker version 26.1.3
-```
+Follow the most up to date instructions at [Docker's Official Installation Page for Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
-To make sure docker is set up correctly, try running the hello-world docker image
-```
-sudo docker run hello-world
-```
+Or alternatively run the following snippet bellow (from the installation page)
+
+1. Set up Docker's `apt` repository.
+
+   ```bash
+   # Add Docker's official GPG key:
+   sudo apt-get update
+   sudo apt-get install ca-certificates curl
+   sudo install -m 0755 -d /etc/apt/keyrings
+   sudo curl -fsSL {{% param "download-url-base" %}}/gpg -o /etc/apt/keyrings/docker.asc
+   sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+   # Add the repository to Apt sources:
+   echo \
+     "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] {{% param "download-url-base" %}} \
+     $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+     sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   sudo apt-get update
+   ```
+
+2. Install the Docker packages.
+   ```console
+   $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   ```
+
+3. Verify that the installation is successful by running the `hello-world` image:
+
+   ```console
+   $ sudo docker run hello-world
+   ```
+
+   This command downloads a test image and runs it in a container. When the
+   container runs, it prints a confirmation message and exits.
 
 ## Running the app for production
 If docker is set up correctly, you can start the app by running run_local.sh

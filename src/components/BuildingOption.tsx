@@ -2,9 +2,11 @@
 
 import Image from 'next/image'
 
-import { Building, useTagById } from "./BuildingContext"
+import { Building, useBuildingTagsMap } from "./BuildingContext"
 
 export default function BuildingOption({ building }: { building: Building }) {
+    const tagMap = useBuildingTagsMap();
+
     return (
         <div className='flex flex-col gap-4'>
             <div className="relative w-[216px] h-[148px] overflow-hidden rounded-lg">
@@ -45,7 +47,13 @@ export default function BuildingOption({ building }: { building: Building }) {
                     <div className='flex flex-col gap-4'>
                         {building
                             .tags
-                            .map(id => useTagById(id))
+                            .map(id => {
+                                const someTag = tagMap.get(id);
+                                if (someTag === undefined) {
+                                    throw new Error(`Building ${building.name} contains invalid tag: ${id}`)
+                                }
+                                return someTag;
+                            })
                             .map(tag => (
                                 <div key={tag.id} className='flex gap-[5px] items-center'>
                                     <Image

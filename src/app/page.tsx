@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { BestFit, DecentFit, WildCard } from "@/components/BuildingRowsDemo";
 import BuildingFilter from "@/components/BuildingFilter";
 

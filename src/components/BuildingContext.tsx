@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, ReactNode } from 'react'
+import { createContext, useContext } from 'react'
 import { buildings } from '@/data/buildings'
 import { buildingTags } from '@/data/tags'
 
@@ -35,14 +35,9 @@ export function BuildingProvider({ children }: { children: React.ReactNode }) {
 }
 
 export const useBuildings = () => useContext(BuildingContext).buildings
-export const useBuildingTags = () => useContext(BuildingContext).tags
+export const useBuildingTagsMap = () => new Map(useContext(BuildingContext).tags.map(tag => [tag.id, tag]))
 
 // Requires that id is a valid building id
 export function useBuildingById(id: string): Building {
     return useBuildings().find(b => b.id === id)!
-}
-
-// Requires that id is a valid tag id
-export function useTagById(id: string): Tag {
-    return useBuildingTags().find(b => b.id === id)!
 }
