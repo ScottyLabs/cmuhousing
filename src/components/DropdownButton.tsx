@@ -51,9 +51,9 @@ export default function DropdownButton({ options, placeholder = "Select an optio
         <div ref={dropdownRef} className="relative w-full">
             <div
                 onClick={() => setIsOpen(!isOpen)}
-                className={"px-4 py-2 rounded-xl font-medium bg-brand-buttongray border border-black/10 w-full flex items-center justify-between select-none cursor-pointer"}
+                className={"px-4 py-2 rounded-xl bg-brand-buttongray border border-black/10 w-full flex items-center justify-between select-none cursor-pointer"}
             >
-                <span className="font-medium">
+                <span className="font-sans text-[14px] leading-none">
                     {selectedOption ? selectedOption.label : placeholder}
                 </span>
                 <Image
@@ -70,7 +70,7 @@ export default function DropdownButton({ options, placeholder = "Select an optio
                         <div
                             key={option.value}
                             onClick={() => handleSelect(option)}
-                            className="px-4 py-1 hover:bg-brand-buttongray first:rounded-t-lg last:rounded-b-lg border-b last:border-b-0 border-black/5 select-none"
+                            className="px-4 py-1 hover:bg-brand-buttongray first:rounded-t-lg last:rounded-b-lg border-b last:border-b-0 border-black/5 select-none font-sans text-[14px]"
                         >
                             {option.label}
                         </div>

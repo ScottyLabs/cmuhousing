@@ -55,8 +55,8 @@ export default function Slider() {
                 .slider::-webkit-slider-thumb {
                     -webkit-appearance: none;
                     appearance: none;
-                    height: 20px;
-                    width: 20px;
+                    height: 18px;
+                    width: 18px;
                     border-radius: 50%;
                     background: var(--color-brand-primary);
                     cursor: pointer;
@@ -64,8 +64,8 @@ export default function Slider() {
                 }
                
                 .slider::-moz-range-thumb {
-                    height: 20px;
-                    width: 20px;
+                    height: 18px;
+                    width: 18px;
                     border-radius: 50%;
                     background: var(--color-brand-primary);
                     cursor: pointer;
