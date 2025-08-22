@@ -1,6 +1,6 @@
 'use client'
 
-import { useBuildingById } from "./BuildingContext";
+import { useBuildingById } from "@/components/BuildingContext";
 import BuildingOptionRow from "./BuildingOptionRow";
 
 export function BestFit() {

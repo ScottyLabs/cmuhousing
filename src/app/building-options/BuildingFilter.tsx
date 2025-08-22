@@ -2,14 +2,12 @@
 
 import Image from 'next/image'
 import FilterHeader from './FilterHeader'
-import { SelectOption } from './DropdownButton'
-import DropdownButton from './DropdownButton'
+import { SelectOption } from '@/components/DropdownButton'
+import DropdownButton from '@/components/DropdownButton'
 import { useState } from 'react'
-import { Building, useBuildings } from './BuildingContext'
-import GenericButton from './GenericButton'
-import { ButtonVariants } from './GenericButton'
-import Slider from './Slider'
-import Checkbox from './Checkbox'
+import { Building, useBuildings } from '@/components/BuildingContext'
+import Slider from '@/components/Slider'
+import Checkbox from '@/components/Checkbox'
 
 export default function BuildingFilter() {
     const [isOpen, setIsOpen] = useState(true);

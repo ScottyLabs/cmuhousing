@@ -1,7 +1,7 @@
 'use client'
 
-import BuildingOption from "./BuildingOption";
-import { Building } from "./BuildingContext"
+import TaggedBuildingOption from "./TaggedBuildingOption";
+import { Building } from "@/components/BuildingContext"
 import Image from 'next/image'
 
 export default function BuildingOptionRow({ title, icon, icon_alt, buildings }: { title: string, icon: string, icon_alt: string, buildings: Building[] }) {
@@ -20,7 +20,7 @@ export default function BuildingOptionRow({ title, icon, icon_alt, buildings }: 
                 </h2>
             </div>
             <div className="flex gap-[12px] ">
-                {buildings.map(b => (<BuildingOption key={b.id} building={b} />))}
+                {buildings.map(b => (<TaggedBuildingOption key={b.id} building={b} />))}
             </div>
         </div>
     );

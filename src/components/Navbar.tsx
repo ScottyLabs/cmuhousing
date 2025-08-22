@@ -26,9 +26,9 @@ export default function Navbar() {
                 <div className="flex gap-2 xl:gap-8 items-center px-6">
                     <NavButton href="/" name="Home" icon="/home.svg" isActive={pathname === "/"} />
                     <div className="h-4 w-0.5 bg-black/10" />
-                    <NavButton href="/building_options" name="All Building Options" icon="/all-buildings.svg" isActive={pathname === "/building_options"} />
+                    <NavButton href="/building-options" name="All Building Options" icon="/all-buildings.svg" isActive={pathname === "/building-options"} />
                     <div className="h-4 w-0.5 bg-black/10" />
-                    <NavButton href="/building_comparison" name="Building Comparison" icon="/comparison.svg" isActive={pathname === "/building_comparison"} />
+                    <NavButton href="/building-comparison" name="Building Comparison" icon="/comparison.svg" isActive={pathname === "/building-comparison"} />
                     <div className="h-4 w-0.5 bg-black/10" />
                     <NavButton href="/map" name="Campus Map" icon="/map.svg" isActive={pathname === "/map"} />
                     <div className="h-4 w-0.5 bg-black/10" />

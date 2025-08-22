@@ -2,22 +2,19 @@
 
 import Image from 'next/image'
 
-import { Building, useBuildingTagsMap } from "./BuildingContext"
+import { Building } from "./BuildingContext"
 
-export default function BuildingOption({ building }: { building: Building }) {
-    const tagMap = useBuildingTagsMap();
-
+export default function BuildingOption({ building, width, height }: { building: Building, width: number, height: number }) {
     return (
-        <div className='flex flex-col gap-4'>
-            <div className="relative w-[216px] h-[148px] overflow-hidden rounded-lg">
-                <Image
-                    src={building.image}
-                    alt={building.name}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    priority
-                />
-                <div className="
+        <div className="relative overflow-hidden rounded-lg" style={{ width: width, height: height }}>
+            <Image
+                src={building.image}
+                alt={building.name}
+                fill
+                style={{ objectFit: 'cover' }}
+                priority
+            />
+            <div className="
                     absolute 
                     inset-x-0 
                     bottom-0 
@@ -28,50 +25,18 @@ export default function BuildingOption({ building }: { building: Building }) {
                     pointer-events-none
                 " />
 
-                <div className="
+            <div className="
                     font-sans 
                     absolute 
                     bottom-0 
                     left-0 
                     m-2 
-                    text-white 
-                    text-px[24]
+                    text-white
                     px-6 py-2 
                     rounded
                 ">
-                    {building.name}
-                </div>
+                {building.name}
             </div>
-            <>
-                {building.tags.length > 0 && (
-                    <div className='flex flex-col gap-4'>
-                        {building
-                            .tags
-                            .map(id => {
-                                const someTag = tagMap.get(id);
-                                if (someTag === undefined) {
-                                    throw new Error(`Building ${building.name} contains invalid tag: ${id}`)
-                                }
-                                return someTag;
-                            })
-                            .map(tag => (
-                                <div key={tag.id} className='flex gap-[5px] items-center'>
-                                    <Image
-                                        src={tag.icon}
-                                        alt={tag.label}
-                                        width={28.75}
-                                        height={28.75}
-                                        className="w-[28.75px] h-[28.75px]"
-                                    />
-                                    <h2 className="font-sans text-px[18] font-medium">
-                                        {tag.label}
-                                    </h2>
-                                </div>
-                            ))
-                        }
-                    </div>
-                )}
-            </>
         </div>
-    )
+    );
 }
