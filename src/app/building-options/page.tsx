@@ -9,7 +9,7 @@ export default function Home() {
       </div>
 
       <div className='flex-1 flex flex-col px-5 overflow-hidden'>
-        <h1 className="font-sans font-bold text-[24px] py-3 flex-shrink-0">
+        <h1 className="font-bold text-[26px] pt-1 pb-3 flex-shrink-0">
           All Building Options
         </h1>
         <div className="flex-1 overflow-y-auto">

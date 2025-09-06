@@ -16,7 +16,7 @@ export default function BuildingPanelDemo() {
     return (
         <div className='space-y-4 overflow-x-auto min-w-[300px] max-w-full pb-3'>
             <div className='flex gap-[12px] items-center'>
-                <h2 className="font-sans font-semibold text-lg">
+                <h2 className="font-semibold text-[22px]">
                     Recommended Buildings
                 </h2>
             </div>
@@ -33,7 +33,7 @@ export default function BuildingPanelDemo() {
                         height={42}
                         className="w-[42px] h-[42px]"
                     />
-                    <div className="font-sans font-semibold text-black text-[20px] w-full text-center ">
+                    <div className="font-semibold text-black text-[20px] w-full text-center ">
                         See all Buildings
                     </div>
                 </Link>

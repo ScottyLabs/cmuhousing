@@ -29,7 +29,7 @@ export default function Checkbox({ label }: { label: string }) {
             </div>
             {label &&
                 <div>
-                    <span className="font-sans leading-none text-[14px]">{label}</span>
+                    <span className="leading-none text-[14px]">{label}</span>
                 </div>
             }
         </label>
