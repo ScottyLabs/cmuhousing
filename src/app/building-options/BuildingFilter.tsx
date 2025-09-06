@@ -25,8 +25,8 @@ export default function BuildingFilter() {
         <div>
             {isOpen && (
                 <div className='flex-1 flex flex-col overflow-hidden bg-brand-menugray border border-black/10 rounded-xl w-[250px] h-[87vh]'>
-                    <div className="flex items-center justify-between w-full flex-shrink-0 pt-6 pb-4 px-5 py-4">
-                        <h2 className="font-sans font-semibold text-[20px] leading-none">Filter by...</h2>
+                    <div className="flex items-center justify-between w-full flex-shrink-0 py-6 px-5">
+                        <h2 className="font-semibold text-[20px] leading-none">Filter by...</h2>
                         <div className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
                             <Image
                                 src="/hide-sidebar-v2.svg"
@@ -39,38 +39,47 @@ export default function BuildingFilter() {
 
                     </div>
                     <div className="flex-1 overflow-y-auto px-5">
-                        <div className="flex flex-col gap-[10px] items-center sm:items-start">
-                            <FilterHeader name="Distance from" desc="" icon="/distance.svg" />
-                            <DropdownButton options={buildlingOptions} onChangeAction={handleDistanceFromChange} value={distanceFromValue} />
+                        <div className="flex flex-col gap-[30px] items-center sm:items-start">
 
-                            <FilterHeader name="Atmosphere" desc="Data based on what students say" icon="/atmosphere.svg" />
-                            <div className="flex flex-col w-full">
-                                <h2 className="font-sans text-[14px]">Socialness</h2>
-                                <Slider />
-                            </div>
-                            <div className="flex flex-col w-full">
-                                <h2 className="font-sans text-[14px]">Noise Level</h2>
-                                <Slider />
+                            <div className="flex flex-col w-full gap-[10px]">
+                                <FilterHeader name="Distance from" desc="" icon="/distance.svg" />
+                                <DropdownButton options={buildlingOptions} onChangeAction={handleDistanceFromChange} value={distanceFromValue} />
                             </div>
 
-                            <FilterHeader name="Accommodations" desc="Requirements for you" icon="/accomadations.svg" />
-                            <div className="flex flex-col gap-[10px] w-full sm:items-start pl-1">
-                                <Checkbox label="Service Animal" />
-                                <Checkbox label="Wheelchair accessible" />
-                                <Checkbox label="Single room" />
-                            </div>
-
-                            <FilterHeader name="Amenities" desc="Preferences" icon="/amenities.svg" />
-                            <div className="flex flex-col gap-[10px] w-full sm:items-start pl-1">
-                                <Checkbox label="Air conditioning" />
-                                <Checkbox label="Laundry on each floor" />
-                                <Checkbox label="En suite bathroom" />
-                                <Checkbox label="Kitchen access" />
-                                <div className="flex flex-col gap-[10px] w-full sm:items-start pl-7">
-                                    <Checkbox label="En suite kitchen" />
+                            <div className="flex flex-col w-full gap-[10px]">
+                                <FilterHeader name="Atmosphere" desc="Data based on what students say" icon="/atmosphere.svg" />
+                                <div className="flex flex-col w-full">
+                                    <h2 className="text-[14px]">Socialness</h2>
+                                    <Slider />
                                 </div>
-                                <Checkbox label="Common areas" />
-                                <Checkbox label="Elevator access" />
+                                <div className="flex flex-col w-full">
+                                    <h2 className="text-[14px]">Noise Level</h2>
+                                    <Slider />
+                                </div>
+                            </div>
+
+                            <div className="flex flex-col w-full gap-[10px]">
+                                <FilterHeader name="Accommodations" desc="Requirements for you" icon="/accomadations.svg" />
+                                <div className="flex flex-col gap-[10px] w-full sm:items-start pl-1">
+                                    <Checkbox label="Service Animal" />
+                                    <Checkbox label="Wheelchair accessible" />
+                                    <Checkbox label="Single room" />
+                                </div>
+                            </div>
+
+                            <div className="flex flex-col w-full gap-[10px]">
+                                <FilterHeader name="Amenities" desc="Preferences" icon="/amenities.svg" />
+                                <div className="flex flex-col gap-[10px] w-full sm:items-start pl-1">
+                                    <Checkbox label="Air conditioning" />
+                                    <Checkbox label="Laundry on each floor" />
+                                    <Checkbox label="En suite bathroom" />
+                                    <Checkbox label="Kitchen access" />
+                                    <div className="flex flex-col gap-[10px] w-full sm:items-start pl-7">
+                                        <Checkbox label="En suite kitchen" />
+                                    </div>
+                                    <Checkbox label="Common areas" />
+                                    <Checkbox label="Elevator access" />
+                                </div>
                             </div>
                         </div>
                     </div>

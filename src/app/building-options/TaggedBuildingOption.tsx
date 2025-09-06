@@ -10,7 +10,7 @@ export default function TaggedBuildingOption({ building }: { building: Building 
 
     return (
         <div className='flex flex-col gap-4'>
-            <BuildingOption building={building} width={216} height={148} />
+            <BuildingOption building={building} width={250} height={170} />
             <>
                 {building.tags.length > 0 && (
                     <div className='flex flex-col gap-4'>
@@ -28,11 +28,11 @@ export default function TaggedBuildingOption({ building }: { building: Building 
                                     <Image
                                         src={tag.icon}
                                         alt={tag.label}
-                                        width={28.75}
-                                        height={28.75}
-                                        className="w-[28.75px] h-[28.75px]"
+                                        width={22}
+                                        height={22}
+                                        className="w-[22px] h-[22px]"
                                     />
-                                    <h2 className="font-sans text-px[18] font-medium">
+                                    <h2 className="text-[14px]">
                                         {tag.label}
                                     </h2>
                                 </div>

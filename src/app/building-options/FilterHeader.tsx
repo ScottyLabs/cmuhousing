@@ -13,12 +13,12 @@ export default function FilterHeader({ name, desc, icon }: { name: string, desc:
                     height={30}
                     className="w-[30px] h-[30px]"
                 />
-                <div>
-                    <h2 className="font-sans font-semibold text-[16px]">
+                <div className="h-fit">
+                    <h2 className="font-semibold text-[16px] leading-none">
                         {name}
                     </h2>
                     {desc && (
-                        <h3 className="font-sans text-gray-500 text-[10px]">
+                        <h3 className="text-gray-500 text-[10px] leading-none pt-1">
                             {desc}
                         </h3>
                     )}
