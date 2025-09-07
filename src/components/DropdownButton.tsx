@@ -51,11 +51,16 @@ export default function DropdownButton({ options, placeholder = "Select an optio
         <div ref={dropdownRef} className="relative w-full">
             <div
                 onClick={() => setIsOpen(!isOpen)}
-                className={"px-4 py-3 rounded-xl bg-brand-buttongray border border-black/10 w-full flex items-center justify-between select-none cursor-pointer"}
+                className={"px-4 h-[68px] rounded-2xl bg-brand-buttongray border border-black/10 w-full flex items-center justify-between select-none cursor-pointer"}
             >
-                <span className="font-semibold text-[16px] leading-none">
-                    {selectedOption ? selectedOption.label : placeholder}
-                </span>
+                <div className="flex flex-col h-[37px] justify-center gap-[4px]">
+                    <span className="font-semibold text-[18px] leading-none">
+                        {selectedOption ? selectedOption.label : placeholder}
+                    </span>
+                    <span className="text-[12px] text-gray-500 leading-none">
+                        First Year Housing
+                    </span>
+                </div>
                 <Image
                     src="/dropdown-closed.svg"
                     alt="dropdown closed"

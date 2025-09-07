@@ -9,16 +9,16 @@ export enum ButtonVariants {
 
 export default function GenericButton({ name, nameSize, icon, style }: { name: string, nameSize: number, icon: string, style: ButtonVariants }) {
     return (
-        <div className={`px-4 py-2 h-full rounded-xl border select-none cursor-pointer ${style === ButtonVariants.Orange ? 'bg-brand-primary text-white' :
+        <div className={`px-[43.5px] py-[16px] h-full rounded-[18px] border select-none cursor-pointer ${style === ButtonVariants.Orange ? 'bg-brand-primary text-white' :
             'transition-colors duration-200 bg-brand-menugray hover:bg-gray-200 border-black/10'}`}
         >
             <div className="flex gap-2 items-center h-full" style={{ fontSize: `${nameSize}px` }}>
                 <Image
                     src={icon}
                     alt={name}
-                    width={14}
-                    height={14}
-                    className={`w-[14px] h-[14px] ${style === ButtonVariants.Orange ? 'brightness-0 invert' : 'brightness-100'}`}
+                    width={24}
+                    height={24}
+                    className={`w-[24px] h-[24px] ${style === ButtonVariants.Orange ? 'brightness-0 invert' : 'brightness-100'}`}
                 />
                 {name}
             </div>

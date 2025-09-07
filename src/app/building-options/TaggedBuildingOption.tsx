@@ -9,11 +9,11 @@ export default function TaggedBuildingOption({ building }: { building: Building 
     const tagMap = useBuildingTagsMap();
 
     return (
-        <div className='flex flex-col gap-4'>
-            <BuildingOption building={building} width={250} height={170} />
+        <div className='flex flex-col gap-[20px]'>
+            <BuildingOption building={building} width={320} height={220} />
             <>
                 {building.tags.length > 0 && (
-                    <div className='flex flex-col gap-4'>
+                    <div className='flex flex-col gap-[18px]'>
                         {building
                             .tags
                             .map(id => {
@@ -28,11 +28,11 @@ export default function TaggedBuildingOption({ building }: { building: Building 
                                     <Image
                                         src={tag.icon}
                                         alt={tag.label}
-                                        width={22}
-                                        height={22}
-                                        className="w-[22px] h-[22px]"
+                                        width={34.56}
+                                        height={34.56}
+                                        className="w-[34.56px] h-[34.56px]"
                                     />
-                                    <h2 className="text-[14px]">
+                                    <h2 className="text-[18px]">
                                         {tag.label}
                                     </h2>
                                 </div>

@@ -6,7 +6,7 @@ import { Building } from "./BuildingContext"
 
 export default function BuildingOption({ building, width, height }: { building: Building, width: number, height: number }) {
     return (
-        <div className="relative overflow-hidden rounded-2xl" style={{ width: width, height: height }}>
+        <div className="relative overflow-hidden rounded-[18px]" style={{ width: width, height: height }}>
             <Image
                 src={building.image}
                 alt={building.name}
@@ -33,7 +33,7 @@ export default function BuildingOption({ building, width, height }: { building: 
                     text-white
                     px-6 py-2 
                     rounded
-                    text-[20px]
+                    text-[24px]
                     font-semibold
                 ">
                 {building.name}

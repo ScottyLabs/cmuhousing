@@ -8,21 +8,21 @@ export default function NavButton({ href, name, icon, isActive }: { href: string
         <Link
             href={href}
             className={`
-                px-4 py-2 rounded-xl font-medium transition-colors duration-200
+                p-[19px] flex rounded-2xl transition-colors duration-200 items-center justify-center
                 ${isActive
                     ? 'bg-brand-primary text-white'
                     : 'hover:bg-gray-100'
                 }
             `}
         >
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-[10px] items-center text-[18px] h-[22px]">
                 <Image
                     src={icon}
                     alt={name}
-                    width={14}
-                    height={14}
+                    width={16}
+                    height={16}
                     className={isActive ? "brightness-0 invert" : "brightness-100"}
-                    style={{ height: '14px', width: '14px' }}
+                    style={{ height: '16px', width: '16px' }}
                 />
                 {name}
             </div>
