@@ -79,43 +79,43 @@ export default function BuildingFilter() {
                 </div>
             )}
             {!isOpen && (
-                <div className='flex-1 flex flex-col gap-[20px] overflow-hidden bg-brand-menugray border border-black/10 rounded-xl w-[50px] h-[87vh] py-6 items-center'>
+                <div className='flex-1 flex flex-col gap-[20px] overflow-hidden bg-brand-menugray border border-black/10 rounded-xl w-[75px] h-[83vh] py-6 items-center'>
                     <div className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
                         <Image
                             src="/hide-sidebar-v2.svg"
                             alt="hide sidebar"
-                            width={20}
-                            height={20}
-                            className="w-[20px] h-[20px]"
+                            width={22.4}
+                            height={22.4}
+                            className="w-[22.4px] h-[22.4px]"
                         />
                     </div>
                     <Image
                         src="/distance.svg"
                         alt="distance from"
-                        width={30}
-                        height={30}
-                        className="w-[30px] h-[30px]"
+                        width={38.4}
+                        height={38.4}
+                        className="w-[38.4px] h-[38.4px]"
                     />
                     <Image
                         src="/atmosphere.svg"
                         alt="atmosphere"
-                        width={30}
-                        height={30}
-                        className="w-[30px] h-[30px]"
+                        width={38.4}
+                        height={38.4}
+                        className="w-[38.4px] h-[38.4px]"
                     />
                     <Image
                         src="/accomadations.svg"
                         alt="accomadations"
-                        width={30}
-                        height={30}
-                        className="w-[30px] h-[30px]"
+                        width={38.4}
+                        height={38.4}
+                        className="w-[38.4px] h-[38.4px]"
                     />
                     <Image
                         src="/amenities.svg"
                         alt="amenities"
-                        width={30}
-                        height={30}
-                        className="w-[30px] h-[30px]"
+                        width={38.4}
+                        height={38.4}
+                        className="w-[38.4px] h-[38.4px]"
                     />
                 </div>
             )}
