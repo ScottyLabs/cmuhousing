@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`h-screen flex flex-col overflow-x-hidden ${schibstedGrotesk.variable}`}>
         <Navbar />
-        <div className="h-0.5 bg-gray-200 mb-4"></div>
+        <div className="h-0.5 bg-gray-200"></div>
         <BuildingProvider>
           <main className="flex-1 overflow-hidden">
             {children}

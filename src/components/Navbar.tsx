@@ -6,13 +6,14 @@ import NavButton from "./NavButton";
 import GenericButton from "./GenericButton";
 import { ButtonVariants } from "./GenericButton";
 import { usePathname } from "next/navigation";
+import NavbarSpacer from "./NavbarSpacer";
 
 export default function Navbar() {
     const pathname = usePathname()
 
     return (
         <div className="overflow-x-auto w-full">
-            <div className="flex items-center justify-between min-w-[1400px] xl:min-w-[1600px] pb-3 px-8 py-3 whitespace-nowrap">
+            <div className="flex items-center justify-between min-w-[1600px] h-[100px] px-[26px] whitespace-nowrap">
                 <Link href="/" className="relative min-w-[168px] min-h-[28px]">
                     <Image
                         src="/logo.svg"
@@ -23,29 +24,29 @@ export default function Navbar() {
                     />
                 </Link>
 
-                <div className="flex gap-2 xl:gap-8 items-center px-6">
+                <div className="flex gap-[16px] items-center">
                     <NavButton href="/" name="Home" icon="/home.svg" isActive={pathname === "/"} />
-                    <div className="h-4 w-0.5 bg-black/10" />
+                    <NavbarSpacer left_nbr_path="/" right_nbr_path="/building-options" pathname={pathname} />
                     <NavButton href="/building-options" name="All Building Options" icon="/all-buildings.svg" isActive={pathname === "/building-options"} />
-                    <div className="h-4 w-0.5 bg-black/10" />
+                    <NavbarSpacer left_nbr_path="/building-options" right_nbr_path="/building-comparison" pathname={pathname} />
                     <NavButton href="/building-comparison" name="Building Comparison" icon="/comparison.svg" isActive={pathname === "/building-comparison"} />
-                    <div className="h-4 w-0.5 bg-black/10" />
+                    <NavbarSpacer left_nbr_path="/building-comparison" right_nbr_path="/map" pathname={pathname} />
                     <NavButton href="/map" name="Campus Map" icon="/map.svg" isActive={pathname === "/map"} />
-                    <div className="h-4 w-0.5 bg-black/10" />
+                    <NavbarSpacer left_nbr_path="/map" right_nbr_path="/roommates" pathname={pathname} />
                     <NavButton href="/roommates" name="Roommates" icon="/person.svg" isActive={pathname === "/roommates"} />
                 </div>
 
-                <div className="flex gap-8 items-center">
+                <div className="flex gap-[14px] items-center">
                     <div>
-                        <GenericButton name="Share with friends!" nameSize={16} icon="/share.svg" style={ButtonVariants.Gray} />
+                        <GenericButton name="Share with friends!" nameSize={18} icon="/share.svg" style={ButtonVariants.Gray} />
                     </div>
                     <Link href="/profile">
                         <Image
                             src="/profile.svg"
                             alt="profile"
-                            width={40}
-                            height={40}
-                            className="rounded-full w-[40px] h-[40px]"
+                            width={52}
+                            height={52}
+                            className="rounded-full w-[52px] h-[52px]"
                         />
                     </Link>
                 </div>
