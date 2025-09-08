@@ -1,3 +1,7 @@
+## Alpha Demo
+
+The cmu housing project is hosted at https://cmuhousing.com, however it is currently in alpha and lacks functionality in many regards. Take it as a demo of what the site will appear like, not an MVP. Currently we're on track for an MVP in late October / early November, so check back frequently for updates!
+
 ## Getting Started
 
 First, make sure you have docker installed
