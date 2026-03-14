@@ -1,6 +1,6 @@
 ## Alpha Demo
 
-The cmu housing project is hosted at https://cmuhousing.com, however it is currently in alpha and lacks functionality in many regards. Take it as a demo of what the site will appear like, not an MVP. Currently we're on track for an MVP in late October / early November, so check back frequently for updates!
+The cmu housing project is hosted at https://cmuhousing.com, however it is currently in alpha and lacks functionality in many regards. Take it as a demo of what the site will appear like, not an MVP.
 
 ## Getting Started
 
@@ -14,21 +14,25 @@ Or alternatively run the following snippet bellow (from the installation page)
 
 1. Set up Docker's `apt` repository.
 
-   ```bash
-   # Add Docker's official GPG key:
-   sudo apt-get update
-   sudo apt-get install ca-certificates curl
-   sudo install -m 0755 -d /etc/apt/keyrings
-   sudo curl -fsSL {{% param "download-url-base" %}}/gpg -o /etc/apt/keyrings/docker.asc
-   sudo chmod a+r /etc/apt/keyrings/docker.asc
+```bash
+# Add Docker's official GPG key:
+sudo apt update
+sudo apt install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-   # Add the repository to Apt sources:
-   echo \
-     "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] {{% param "download-url-base" %}} \
-     $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
-     sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-   sudo apt-get update
-   ```
+# Add the repository to Apt sources:
+sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}")
+Components: stable
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+
+sudo apt-get update
+```
 
 2. Install the Docker packages.
    ```console
@@ -43,6 +47,14 @@ Or alternatively run the following snippet bellow (from the installation page)
 
    This command downloads a test image and runs it in a container. When the
    container runs, it prints a confirmation message and exits.
+
+4. You may also need to add user to the docker group to get the correct permissions to run the program
+
+   ```console
+   $ sudo usermod -aG docker ${USER}
+   ```
+   
+   Then restart your terminal
 
 ## Running the app for production
 If docker is set up correctly, you can start the app by running run_local.sh
