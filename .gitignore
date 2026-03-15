@@ -42,3 +42,7 @@ next-env.d.ts
 
 # VSCode
 .vscode
+
+# .lock files
+bun.lock
+pnpm-lock.yaml
