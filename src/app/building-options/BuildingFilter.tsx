@@ -1,20 +1,21 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import FilterHeader from './FilterHeader'
-import { SelectOption } from '@/components/DropdownButton'
-import DropdownButton from '@/components/DropdownButton'
-import { useState } from 'react'
-import { Building, useBuildings } from '@/components/BuildingContext'
-import Slider from '@/components/Slider'
-import Checkbox from '@/components/Checkbox'
+import Image from "next/image";
+import FilterHeader from "./FilterHeader";
+import { SelectOption } from "@/components/DropdownButton";
+import DropdownButton from "@/components/DropdownButton";
+import { useState } from "react";
+import { Building, useBuildings } from "@/components/BuildingContext";
+import Slider from "@/components/Slider";
+import Checkbox from "@/components/Checkbox";
 
 export default function BuildingFilter() {
     const [isOpen, setIsOpen] = useState(true);
 
-    const buildings: Building[] = useBuildings().sort((b1, b2) => b1.name.toLowerCase().localeCompare(b2.name.toLowerCase()));
-    const buildlingOptions: SelectOption[] =
-        buildings.map(b => ({ value: b.id, label: b.name }))
+    const buildings: Building[] = useBuildings().sort((b1, b2) =>
+        b1.name.toLowerCase().localeCompare(b2.name.toLowerCase())
+    );
+    const buildlingOptions: SelectOption[] = buildings.map((b) => ({ value: b.id, label: b.name }));
 
     const [distanceFromValue, setDistanceFromValue] = useState("");
     const handleDistanceFromChange = (value: string) => {
@@ -24,7 +25,7 @@ export default function BuildingFilter() {
     return (
         <div className="pb-10">
             {isOpen && (
-                <div className='flex-1 flex flex-col overflow-hidden bg-brand-menugray border border-black/10 rounded-xl w-[385px] h-[83vh]'>
+                <div className="flex-1 flex flex-col overflow-hidden bg-brand-menugray border border-black/10 rounded-xl w-[385px] h-[83vh]">
                     <div className="flex items-center justify-between w-full flex-shrink-0 pt-[31px] pb-[24px] px-5">
                         <h2 className="font-semibold text-[24px] leading-none">Filter by...</h2>
                         <div className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
@@ -36,17 +37,24 @@ export default function BuildingFilter() {
                                 className="w-[22.4px] h-[22.4px]"
                             />
                         </div>
-
                     </div>
                     <div className="flex-1 overflow-y-auto px-[24px] pb-[24px]">
                         <div className="flex flex-col gap-[38px] items-center sm:items-start">
                             <div className="flex flex-col w-full gap-[18px]">
                                 <FilterHeader name="Distance from" desc="" icon="/distance.svg" />
-                                <DropdownButton options={buildlingOptions} onChangeAction={handleDistanceFromChange} value={distanceFromValue} />
+                                <DropdownButton
+                                    options={buildlingOptions}
+                                    onChangeAction={handleDistanceFromChange}
+                                    value={distanceFromValue}
+                                />
                             </div>
 
                             <div className="flex flex-col w-full gap-[24px]">
-                                <FilterHeader name="Atmosphere" desc="Data based on what students say" icon="/atmosphere.svg" />
+                                <FilterHeader
+                                    name="Atmosphere"
+                                    desc="Data based on what students say"
+                                    icon="/atmosphere.svg"
+                                />
                                 <div className="flex flex-col w-full">
                                     <h2 className="text-[18px]">Socialness</h2>
                                     <Slider />
@@ -58,7 +66,11 @@ export default function BuildingFilter() {
                             </div>
 
                             <div className="flex flex-col w-full gap-[14px]">
-                                <FilterHeader name="Accommodations" desc="Requirements for you" icon="/accomadations.svg" />
+                                <FilterHeader
+                                    name="Accommodations"
+                                    desc="Requirements for you"
+                                    icon="/accomadations.svg"
+                                />
                                 <div className="flex flex-col gap-[26px] w-full sm:items-start pl-1">
                                     <Checkbox label="Service Animal" />
                                     <Checkbox label="Wheelchair accessible" />
@@ -79,7 +91,7 @@ export default function BuildingFilter() {
                 </div>
             )}
             {!isOpen && (
-                <div className='flex-1 flex flex-col gap-[20px] overflow-hidden bg-brand-menugray border border-black/10 rounded-xl w-[75px] h-[83vh] py-6 items-center'>
+                <div className="flex-1 flex flex-col gap-[20px] overflow-hidden bg-brand-menugray border border-black/10 rounded-xl w-[75px] h-[83vh] py-6 items-center">
                     <div className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
                         <Image
                             src="/hide-sidebar-v2.svg"
@@ -120,6 +132,5 @@ export default function BuildingFilter() {
                 </div>
             )}
         </div>
-
-    )
+    );
 }

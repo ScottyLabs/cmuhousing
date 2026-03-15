@@ -1,20 +1,23 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
+import Image from "next/image";
 
-import { Building } from "./BuildingContext"
+import { Building } from "./BuildingContext";
 
-export default function BuildingOption({ building, width, height }: { building: Building, width: number, height: number }) {
+export default function BuildingOption({
+    building,
+    width,
+    height
+}: {
+    building: Building;
+    width: number;
+    height: number;
+}) {
     return (
         <div className="relative overflow-hidden rounded-[18px]" style={{ width: width, height: height }}>
-            <Image
-                src={building.image}
-                alt={building.name}
-                fill
-                style={{ objectFit: 'cover' }}
-                priority
-            />
-            <div className="
+            <Image src={building.image} alt={building.name} fill style={{ objectFit: "cover" }} priority />
+            <div
+                className="
                     absolute 
                     inset-x-0 
                     bottom-0 
@@ -23,9 +26,11 @@ export default function BuildingOption({ building, width, height }: { building: 
                     from-black/50
                     to-transparent
                     pointer-events-none
-                " />
+                "
+            />
 
-            <div className="
+            <div
+                className="
                     absolute 
                     bottom-0 
                     left-0 

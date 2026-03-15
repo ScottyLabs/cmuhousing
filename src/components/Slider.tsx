@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function Slider() {
     const [value, setValue] = useState(5);
@@ -30,9 +30,9 @@ export default function Slider() {
                         className="absolute w-[13.55px] h-[13.55px] bg-white rounded-full pointer-events-none"
                         style={{
                             border: `2px solid var(--color-brand-primary)`,
-                            left: '0px',
-                            top: '50%',
-                            transform: 'translateY(-50%)'
+                            left: "0px",
+                            top: "50%",
+                            transform: "translateY(-50%)"
                         }}
                     />
                 )}
@@ -43,9 +43,9 @@ export default function Slider() {
                         className="absolute w-[13.55px] h-[13.55px] bg-white rounded-full pointer-events-none"
                         style={{
                             border: `2px solid var(--color-brand-primary)`,
-                            right: '0px',
-                            top: '50%',
-                            transform: 'translateY(-50%)'
+                            right: "0px",
+                            top: "50%",
+                            transform: "translateY(-50%)"
                         }}
                     />
                 )}
@@ -62,7 +62,7 @@ export default function Slider() {
                     cursor: pointer;
                     border: 0px;
                 }
-               
+
                 .slider::-moz-range-thumb {
                     height: 22.6px;
                     width: 22.6px;
