@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
 import { useBuildingById } from "@/components/BuildingContext";
 import BuildingOptionRow from "./BuildingOptionRow";
 
 export function BestFit() {
-    const best_fit_buildings = [useBuildingById('etower'), useBuildingById('stever'), useBuildingById('boss')]
+    const best_fit_buildings = [useBuildingById("etower"), useBuildingById("stever"), useBuildingById("boss")];
     return (
         <BuildingOptionRow
             title="Best Fit for You"
@@ -17,7 +17,7 @@ export function BestFit() {
 }
 
 export function DecentFit() {
-    const decent_fit_buildings = [useBuildingById('donner'), useBuildingById('henderson'), useBuildingById('mcgill')]
+    const decent_fit_buildings = [useBuildingById("donner"), useBuildingById("henderson"), useBuildingById("mcgill")];
     return (
         <BuildingOptionRow
             title="Decent Fit"
@@ -30,7 +30,7 @@ export function DecentFit() {
 }
 
 export function WildCard() {
-    const wild_card_buildings = [useBuildingById('fifth'), useBuildingById('scobell'), useBuildingById('welch')]
+    const wild_card_buildings = [useBuildingById("fifth"), useBuildingById("scobell"), useBuildingById("welch")];
     return (
         <BuildingOptionRow
             title="Wild Card"
