@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 
 export default function NavButton({
     href,
@@ -22,11 +21,7 @@ export default function NavButton({
                 ${isActive ? "bg-brand-primary text-white" : "hover:bg-gray-100"}
             `}>
             <div className="flex gap-2 items-center text-lg h-full">
-                <img
-                    src={icon}
-                    alt={`${name} Icon`}
-                    className={isActive ? "brightness-0 invert" : "brightness-100"}
-                />
+                <img src={icon} alt={`${name} Icon`} className={isActive ? "brightness-0 invert" : "brightness-100"} />
                 {name}
             </div>
         </Link>
