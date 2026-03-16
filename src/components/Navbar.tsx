@@ -3,10 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import NavButton from "./NavButton";
-import GenericButton from "./GenericButton";
-import { ButtonVariants } from "./GenericButton";
 import { usePathname } from "next/navigation";
-import NavbarSpacer from "./NavbarSpacer";
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -26,8 +23,7 @@ export default function Navbar() {
                         isActive={pathname === "/building-options"}
                     />
                     <div className="flex h-[47px] w-[9px] items-center justify-center">
-                        <div className="h-[18px] w-[0px] border-black/20 border-1 rounded-full">
-                        </div>
+                        <div className="h-[18px] w-[0px] border-black/20 border-1 rounded-full"></div>
                     </div>
                     <NavButton
                         href="/building-comparison"
@@ -36,13 +32,11 @@ export default function Navbar() {
                         isActive={pathname === "/building-comparison"}
                     />
                     <div className="flex h-[47px] w-[9px] items-center justify-center">
-                        <div className="h-[18px] w-[0px] border-black/20 border-1 rounded-full">
-                        </div>
+                        <div className="h-[18px] w-[0px] border-black/20 border-1 rounded-full"></div>
                     </div>
                     <NavButton href="/map" name="Campus Map" icon="/map.svg" isActive={pathname === "/map"} />
                     <div className="flex h-[47px] w-[9px] items-center justify-center">
-                        <div className="h-[18px] w-[0px] border-black/20 border-1 rounded-full">
-                        </div>
+                        <div className="h-[18px] w-[0px] border-black/20 border-1 rounded-full"></div>
                     </div>
                     <NavButton
                         href="/roommates"
@@ -54,7 +48,9 @@ export default function Navbar() {
 
                 <div className="flex gap-[14px] items-center">
                     {/* TODO: add share link */}
-                    <Link href="/" className="py-3 px-6 h-full rounded-2xl border select-none cursor-pointer transition-colors duration-200 bg-brand-menugray hover:bg-gray-200 border-black/10">
+                    <Link
+                        href="/"
+                        className="py-3 px-6 h-full rounded-2xl border select-none cursor-pointer transition-colors duration-200 bg-brand-menugray hover:bg-gray-200 border-black/10">
                         <div className="flex gap-2 items-center h-full">
                             <img src="/share.svg" alt="Share Icon" className="brightness-100" />
                             <p className="text-lg">Share with friends!</p>
