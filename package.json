@@ -15,6 +15,8 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^9.39.4",
     "@tailwindcss/postcss": "^4.2.1",
     "@types/node": "^20.19.37",
     "@types/react": "^19.2.14",
@@ -24,6 +26,6 @@
     "prettier": "^3.8.1",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.57.0"
+    "typescript-eslint": "^8.57.1"
   }
 }
