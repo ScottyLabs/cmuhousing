@@ -48,12 +48,13 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex gap-[14px] items-center">
-                    <div className="py-3 px-6 h-full rounded-2xl border select-none cursor-pointer transition-colors duration-200 bg-brand-menugray hover:bg-gray-200 border-black/10">
+                    {/* TODO: add share link */}
+                    <Link href="/" className="py-3 px-6 h-full rounded-2xl border select-none cursor-pointer transition-colors duration-200 bg-brand-menugray hover:bg-gray-200 border-black/10">
                         <div className="flex gap-2 items-center h-full">
                             <img src="/share.svg" alt="Share Icon" className="brightness-100" />
-                            <p>Share with friends!</p>
+                            <p className="text-lg">Share with friends!</p>
                         </div>
-                    </div>
+                    </Link>
                     <Link href="/profile">
                         <Image
                             src="/profile.svg"
