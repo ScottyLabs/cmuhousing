@@ -13,10 +13,7 @@ const schibstedGrotesk = Schibsted_Grotesk({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <head>
-                <link rel="icon" href="/favicon.svg" />
-            </head>
-            <body className={`h-screen flex flex-col overflow-x-hidden ${schibstedGrotesk.variable}`}>
+            <body className={`${schibstedGrotesk.variable} antialiased min-h-screen flex flex-col bg-white`}>
                 <Navbar />
                 <div className="h-0.5 bg-gray-200"></div>
                 <BuildingProvider>
