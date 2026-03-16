@@ -25,20 +25,25 @@ export default function Navbar() {
                         icon="/all-buildings.svg"
                         isActive={pathname === "/building-options"}
                     />
-                    <NavbarSpacer
-                        left_nbr_path="/building-options"
-                        right_nbr_path="/building-comparison"
-                        pathname={pathname}
-                    />
+                    <div className="flex h-[47px] w-[9px] items-center justify-center">
+                        <div className="h-[18px] w-[0px] border-black/20 border-1 rounded-full">
+                        </div>
+                    </div>
                     <NavButton
                         href="/building-comparison"
                         name="Building Comparison"
                         icon="/comparison.svg"
                         isActive={pathname === "/building-comparison"}
                     />
-                    <NavbarSpacer left_nbr_path="/building-comparison" right_nbr_path="/map" pathname={pathname} />
+                    <div className="flex h-[47px] w-[9px] items-center justify-center">
+                        <div className="h-[18px] w-[0px] border-black/20 border-1 rounded-full">
+                        </div>
+                    </div>
                     <NavButton href="/map" name="Campus Map" icon="/map.svg" isActive={pathname === "/map"} />
-                    <NavbarSpacer left_nbr_path="/map" right_nbr_path="/roommates" pathname={pathname} />
+                    <div className="flex h-[47px] w-[9px] items-center justify-center">
+                        <div className="h-[18px] w-[0px] border-black/20 border-1 rounded-full">
+                        </div>
+                    </div>
                     <NavButton
                         href="/roommates"
                         name="Roommates"
