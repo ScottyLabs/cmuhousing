@@ -1,5 +1,5 @@
 import BuildingPanelDemo from "./BuildingPanelDemo";
-
+import Survey from "./onboarding/Survey";
 export default function Home() {
   return (
     <div className="flex h-full justify-center mt-[26px]">
@@ -9,7 +9,8 @@ export default function Home() {
         </h1>
         <div className="overflow-y-auto">
           <div className='flex flex-col gap-[16px] items-center sm:items-start pb-2'>
-            <BuildingPanelDemo />
+            {/* <BuildingPanelDemo /> */}
+            <Survey/>
           </div>
         </div>
       </div>
