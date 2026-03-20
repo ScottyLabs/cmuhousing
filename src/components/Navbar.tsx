@@ -3,8 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import NavButton from "./NavButton";
-import GenericButton from "./GenericButton";
-import { ButtonVariants } from "./GenericButton";
 import { usePathname } from "next/navigation";
 import NavbarSpacer from "./NavbarSpacer";
 
