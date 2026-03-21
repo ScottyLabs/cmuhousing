@@ -2,8 +2,10 @@
 import Image from "next/image";
 // import BuildingFilter from "./BuildingFilter";
 import SurveyHeader from "./SurveyHeader";
+import GenericButton from "@/components/GenericButton";
+import { ButtonVariants } from "@/components/GenericButton";
+
 export default function Survey() {
- 
   return (
     <div className="flex h-full pl-[24px] mt-[15px]">
       <div className="flex-shrink-0"></div>
@@ -65,6 +67,21 @@ export default function Survey() {
               />
             </div>
           </label>
+        </div>
+        <div className="pt-8 flex gap-[12px] px-4 items-center">
+          Part 1 of 3
+          <GenericButton
+            name="Next"
+            nameSize={18}
+            icon=""
+            style={ButtonVariants.Orange}
+          />
+          <GenericButton
+            name="Skip"
+            nameSize={18}
+            icon=""
+            style={ButtonVariants.Gray}
+          />
         </div>
       </div>
     </div>
