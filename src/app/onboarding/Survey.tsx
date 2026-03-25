@@ -68,8 +68,13 @@ export default function Survey() {
             </div>
           </label>
         </div>
-        <div className="pt-8 flex gap-[12px] px-4 items-center">
+        <div className="text-[18px] pt-8 flex gap-[12px] px-4 items-center w-full">
           Part 1 of 3
+          <div className="flex flex-col h-[23px] justify-center">
+            <div className="relative flex flex-col justify-center">
+             
+            </div>
+          </div>
           <GenericButton
             name="Next"
             nameSize={18}
