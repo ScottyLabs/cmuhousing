@@ -28,7 +28,7 @@ export default function BuildingDetails() {
                 </div>
             </div>
             
-            <div className="font-semibold flex gap-[12px] pb-[5px] px-4 items-center rounded-2xl items-stretch h-full">
+            <div className="font-semibold flex gap-[20px] pb-[5px] px-4 items-center rounded-2xl items-stretch h-full">
                 <div className="flex-1 text-[20px] pt-[10px] pb-[10px] px-4 rounded-2xl bg-brand-menugray border border-black/10:">
                     Room Types
                     <div className="flex gap-[12px] pt-[10px] pb-[5px] px-4 items-center rounded-2xl">
@@ -108,7 +108,7 @@ export default function BuildingDetails() {
                 </div>
             </div>
 
-            <div className="font-semibold flex gap-[12px] pb-[5px] px-4 items-center rounded-2xl items-stretch h-full">
+            <div className="font-semibold flex gap-[20px] pb-[5px] px-4 items-center rounded-2xl items-stretch h-full">
                 <div className="flex-1 text-[20px] pt-[10px] pb-[10px] px-4 rounded-2xl bg-brand-menugray border border-black/10:">
                     Air Conditioning
                     <div className="flex gap-[12px] pt-[10px] pb-[5px] px-4 items-center rounded-2xl">
