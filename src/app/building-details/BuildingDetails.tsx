@@ -21,52 +21,52 @@ export default function BuildingDetails() {
                 </div>
             </div> */}
             <div className="flex gap-[12px] pt-[10px]  px-4 items-center rounded-2xl">
-                <Image src={"/amenities.svg"} alt={"amenities"} width={64} height={64} className="w-[64px] h-[64px]" />
+                <Image src={"/amenities.svg"} alt={"amenities"} width={48} height={48} className="w-[48px] h-[48px]" />
 
                 <div className="h-fit ">
                     <h1 className="font-semibold text-[24px] pt-[15px] pb-[10px] flex-shrink-0 px-4 ">Amenities</h1>
                 </div>
             </div>
             
-            <div className="flex gap-[12px] pb-[5px] px-4 items-center rounded-2xl items-stretch h-full">
+            <div className="font-semibold flex gap-[12px] pb-[5px] px-4 items-center rounded-2xl items-stretch h-full">
                 <div className="flex-1 text-[20px] pt-[10px] pb-[10px] px-4 rounded-2xl bg-brand-menugray border border-black/10:">
                     Room Types
                     <div className="flex gap-[12px] pt-[10px] pb-[5px] px-4 items-center rounded-2xl">
                         <Image
                             src={"/unsorted-icons/room type/trad single.svg"}
                             alt={"info"}
-                            width={32}
-                            height={32}
-                            className="w-[32px] h-[32px]"
+                            width={48}
+                            height={48}
+                            className="w-[48px] h-[48px]"
                         />
                         <div className="h-fit ">
-                            <h1 className=" text-[16px] pt-[5px] pb-[5px] flex-shrink-0 px-4 ">Traditional Single</h1>
+                            <h1 className=" text-[16px] pt-[5px] pb-[5px] flex-shrink-0 px-4 "><span className="font-normal">Traditional</span> Single</h1>
                         </div>
                     </div>
                     <div className="flex gap-[12px] pt-[5px] pb-[5px] px-4 items-center rounded-2xl">
                         <Image
                             src={"/unsorted-icons/room type/trad double.svg"}
                             alt={"info"}
-                            width={32}
-                            height={32}
-                            className="w-[32px] h-[32px]"
+                            width={48}
+                            height={48}
+                            className="w-[48px] h-[48px]"
                         />
 
                         <div className="h-fit ">
-                            <h1 className=" text-[16px] pt-[5px] pb-[5px] flex-shrink-0 px-4 ">Traditional Double</h1>
+                            <h1 className=" text-[16px] pt-[5px] pb-[5px] flex-shrink-0 px-4 "><span className="font-normal">Traditional</span> Double</h1>
                         </div>
                     </div>
                     <div className="flex gap-[12px] pt-[5px] pb-[5px] px-4 items-center rounded-2xl">
                         <Image
                             src={"/unsorted-icons/room type/trad triple.svg"}
                             alt={"info"}
-                            width={32}
-                            height={32}
-                            className="w-[32px] h-[32px]"
+                            width={48}
+                            height={48}
+                            className="w-[48px] h-[48px]"
                         />
 
                         <div className="h-fit ">
-                            <h1 className=" text-[16px] pt-[5px] pb-[5px] flex-shrink-0 px-4 ">Traditional Triple</h1>
+                            <h1 className=" text-[16px] pt-[5px] pb-[5px] flex-shrink-0 px-4 "><span className="font-normal">Traditional</span> Triple</h1>
                         </div>
                     </div>
                 </div>
@@ -77,13 +77,13 @@ export default function BuildingDetails() {
                         <Image
                             src={"/unsorted-icons/toilet.svg"}
                             alt={"info"}
-                            width={32}
-                            height={32}
-                            className="w-[32px] h-[32px]"
+                            width={48}
+                            height={48}
+                            className="w-[48px] h-[48px]"
                         />
                         <div className="h-fit ">
                             <h1 className="text-[16px] pt-[5px] font-semibold  flex-shrink-0 px-4 ">Communal</h1>
-                            <div className="text-[16px]  pb-[5px] flex-shrink-0 px-4 ">
+                            <div className="font-normal text-[16px]  pb-[5px] flex-shrink-0 px-4 ">
                                 Shower and bathrooms shared per floor
                             </div>
                         </div>
@@ -95,9 +95,9 @@ export default function BuildingDetails() {
                         <Image
                             src={"/distance.svg"}
                             alt={"info"}
-                            width={32}
-                            height={32}
-                            className="w-[32px] h-[32px]"
+                            width={48}
+                            height={48}
+                            className="w-[48px] h-[48px]"
                         />
                         <div className="h-fit ">
                             <h1 className="text-[16px] pt-[5px] pb-[5px] flex-shrink-0 px-4 ">
@@ -108,16 +108,16 @@ export default function BuildingDetails() {
                 </div>
             </div>
 
-            <div className="flex gap-[12px] pb-[5px] px-4 items-center rounded-2xl items-stretch h-full">
+            <div className="font-semibold flex gap-[12px] pb-[5px] px-4 items-center rounded-2xl items-stretch h-full">
                 <div className="flex-1 text-[20px] pt-[10px] pb-[10px] px-4 rounded-2xl bg-brand-menugray border border-black/10:">
                     Air Conditioning
                     <div className="flex gap-[12px] pt-[10px] pb-[5px] px-4 items-center rounded-2xl">
                         <Image
                             src={"/unsorted-icons/ac/none.svg"}
                             alt={"info"}
-                            width={32}
-                            height={32}
-                            className="w-[32px] h-[32px]"
+                            width={48}
+                            height={48}
+                            className="w-[48px] h-[48px]"
                         />
                         <div className="h-fit ">
                             <h1 className=" text-[16px] pt-[5px] pb-[5px] flex-shrink-0 px-4 ">No, limited window units available for medical accomodations</h1>
@@ -131,9 +131,9 @@ export default function BuildingDetails() {
                         <Image
                             src={"/unsorted-icons/stove.svg"}
                             alt={"info"}
-                            width={32}
-                            height={32}
-                            className="w-[32px] h-[32px]"
+                            width={48}
+                            height={48}
+                            className="w-[48px] h-[48px]"
                         />
                         <div className="h-fit ">
                             <div className="text-[16px]  pb-[5px] flex-shrink-0 px-4 ">
@@ -148,9 +148,9 @@ export default function BuildingDetails() {
                         <Image
                             src={"/unsorted-icons/work with others.svg"}
                             alt={"info"}
-                            width={32}
-                            height={32}
-                            className="w-[32px] h-[32px]"
+                            width={48}
+                            height={48}
+                            className="w-[48px] h-[48px]"
                         />
                         <div className="h-fit ">
                             <h1 className="text-[16px] pt-[5px] pb-[5px] flex-shrink-0 px-4 ">
